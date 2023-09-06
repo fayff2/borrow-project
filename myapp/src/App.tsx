@@ -5,6 +5,7 @@ import Rigster from './pages/Rigster'
 import Login from './pages/Login'
 import Home from './pages/Home'
 import UserProfile from './pages/UserProfile'
+import Admin from './pages/Admin'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <Route path='/login' element={<Login/>}></Route>
       <Route path='/home' element={<Home/>}></Route>
       <Route path='/userProfile' element={<UserProfile/>}></Route>
+      <Route path='/admin' element={<Admin/>}></Route>
     </Routes>
    </>
   )
