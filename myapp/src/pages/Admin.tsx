@@ -9,6 +9,7 @@ type Ishow ={
   password:string;
   phone:string;
   status:boolean;
+  iBan:string
 }
 
 export default function Admin() {
@@ -21,7 +22,7 @@ export default function Admin() {
       console.log(res.data)
       setShowUser(res.data)
     })
-  },[])
+  },[setShowUser])
 
 function updateStatus() {
   axios.put(`https://64f753f19d775408495375aa.mockapi.io/useraccount/${id}`, {
@@ -31,23 +32,28 @@ function updateStatus() {
     console.log(res.data.status)
     setShowUser(res.data)
   })
+ 
 }
 
 
   return (
     <>
+    <div>
     {showUser.map((item)=> (
       
-      <>
-      <p>{showUser.name}</p>
-      <p>{showUser.id}</p>
-      <p>{showUser.NID}</p>
-      <p>{showUser.email}</p>
-      <p>{showUser.phone}</p>
-      <p>{showUser.status ? "مفعل" : "غير مفعل"}</p>
-      <button onClick={updateStatus}>تفعيل</button>
-      </>
-    ))}
+      <div className="flex gap-3 mb-1" key={item.id}>
+        
+      <p>{item.name}</p>
+      <p>{item.id}</p>
+      <p>{item.NId}</p>
+      <p>{item.email}</p>
+      <p>{item.phone}</p>
+      <p>{item.iBan}</p>
+      <p>{item.status ? "مفعل" : "غير مفعل"}</p>
+      <button className="border border-black w-auto" onClick={updateStatus}>تفعيل</button>
+      </div>
+))}
+    </div>
       
     </>
   )
