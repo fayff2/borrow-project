@@ -8,14 +8,15 @@ export default function UserSidebar() {
 
 const toggleSidebar = () => {
     setIsOpen(!isOpen);
+    console.log(isOpen)
   };
 
   return (
     <div className="flex ">
-            <div className={`h-screen w-64 fixed top-0  ${isOpen ? "translate-x-0" : ""} transition-transform bg-cc text-white`}>
+            <div className={`h-screen w-64 fixed top-0  ${isOpen ? "translate-x-0" : ""} transition-transform bg-cc text-white `}>
                 <div className="space-y-3 ">
                     <div className="flex items-center justify-between mx-2">
-                        <h2 className="text-xl font-bold">تسليف</h2>
+                        <a href="/"><img src="./public/logo.svg" className='w-20 mr-4 mb-4' /></a>
                     <button className="text-white focus:outline-none md:hidden" onClick={toggleSidebar}>
                      <FontAwesomeIcon icon={faBars} size="lg" />
                      </button>
@@ -23,7 +24,8 @@ const toggleSidebar = () => {
                     
                     {!isOpen && (
                     <div className="flex-1 ">
-                        <ul className="pt-2 pb-4 space-y-1 text-sm">
+                        
+                        <ul className="pt-2 pb-4 space-y-1 text-sm flex flex-col ">
                             <li className="rounded-sm">
                                 <a
                                     href="#"
@@ -32,6 +34,7 @@ const toggleSidebar = () => {
                                     
                                     <span>الرئيسية</span>
                                 </a>
+                                <hr></hr>
                             </li>
                             <li className="rounded-sm">
                                 <a
@@ -41,6 +44,7 @@ const toggleSidebar = () => {
                                     
                                     <span>طلبات السلف</span>
                                 </a>
+                                <hr></hr>
                             </li>
                             <li className="rounded-sm">
                                 <a
@@ -50,6 +54,7 @@ const toggleSidebar = () => {
                                     
                                     <span>طلباتي</span>
                                 </a>
+                                <hr></hr>
                             </li>
                             <li className="rounded-sm">
                                 <a
@@ -59,6 +64,7 @@ const toggleSidebar = () => {
                                     
                                     <span>الفواتير</span>
                                 </a>
+                                <hr></hr>
                             </li>
                             <li className="rounded-sm">
                                 <a
@@ -68,6 +74,7 @@ const toggleSidebar = () => {
                                     
                                     <span>الملف الشخصي</span>
                                 </a>
+                                <hr></hr>
                             </li>
                             <li className="rounded-sm">
                                 <a
@@ -77,6 +84,7 @@ const toggleSidebar = () => {
                                     
                                     <span>تسجيل الخروج</span>
                                 </a>
+                                <hr></hr>
                             </li>
                         </ul>
                     </div>
