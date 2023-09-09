@@ -1,4 +1,4 @@
-
+import UserSidebar from "../component/UserSidebar";
 
 export default function Home() {
 
@@ -10,7 +10,9 @@ export default function Home() {
 
   return (
    <>
-   <h1>home</h1>
+   <UserSidebar/>
+   
+
    </>
   )
 }
