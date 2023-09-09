@@ -10,6 +10,7 @@ type Ishow ={
     password:string;
     phone:string;
     status:boolean;
+    iBan:string
   }
 
 export default function UserProfile() {
@@ -28,24 +29,39 @@ export default function UserProfile() {
     <div >
     <UserSidebar/>
     </div>
-    <div className='flex justify-center '>
-    <div className='container flex border w-96 h-auto' >
-        <div className='flex gap-10 mt-10'>
-          <div className='border border-black w-12 h-12 rounded-full'>
-                <img src="" alt="" />
+    <div className='flex  justify-center '>
+      <div className='container flex  w-96 h-auto mt-10' >
+        <div className='flex flex-col gap-5'>
+          <div className='flex gap-10 mt-10'>
+             <div className=''>
+                <img className='w-16' src="./Male User.png" alt="" />
+             </div>
+             <div className='flex flex-col gap-2'>
+               <p>{showUser.name}</p>
+               <p className=' w-auto px-2 h-auto text-center bg-myPurple rounded-sm'>{showUser.status? "مفعل" : "غير مفعل"}</p>
+             </div>
           </div>
-          <div className='flex flex-col gap-2'>
-          <p>{showUser.name}</p>
-          <p className=' w-auto px-2 h-auto text-center bg-myPurple rounded-sm'>{showUser.status? "مفعل" : "غير مفعل"}</p>
-          <hr />
+          <hr />             
+          <div className='flex flex-col mr-2 gap-2' >
+            <label htmlFor="">البريد الإلكتروني</label>
+            <input className='border border-myPurple w-96'
+             type="text"
+             value={showUser.email} />
+             <label htmlFor="">السجل المدني</label>
+            <input className='border border-myPurple w-96'
+             type="text"
+             value={showUser.NId} />
+             <label htmlFor="">رقم الجوال</label>
+            <input className='border border-myPurple w-96'
+             type="text"
+             value={showUser.phone} />
+             <label htmlFor="">ايبان</label>
+            <input className='border border-myPurple w-96'
+             type="text"
+             value={showUser.iBan} />
           </div>
-
         </div>
-   
-       {/* <p>{showUser.name}</p>
-        <p>{showUser.id}</p>
-        <p>{showUser.status? "مفعل" : "غير مفعل"}</p> */}
-    </div>
+      </div>
     </div>
     </>
   )
