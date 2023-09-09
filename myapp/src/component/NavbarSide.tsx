@@ -19,7 +19,17 @@ export function NavbarSide() {
   }, []);
  
   const navList = (
-    <ul className="text-center  flex flex-col items-start lg:mb-0 lg:mt-0 lg:mr-10 lg:flex-row lg:items-center lg:gap-6">
+    <ul className="text-center  flex flex-col items-start lg:mb-0 lg:mt-0 lg:mr-10 lg:flex-row lg:items-center lg:gap-6 ">
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <a href="#" className="flex items-center">
+       الرئيسية
+        </a>
+      </Typography>
       <Typography
         as="li"
         variant="small"
@@ -45,7 +55,7 @@ export function NavbarSide() {
   );
  
   return (
-    <Navbar className="px-4 lg:px-8 w-screen border-0">
+    <Navbar className="px-4 lg:px-8 w-screen border-0 bg-transparent text-black ">
       <div className="container flex justify-between items-center ">
         <Typography
           as="a"
@@ -56,11 +66,11 @@ export function NavbarSide() {
         </Typography>
         <div className="hidden lg:block">{navList}</div>
         <div className="hidden lg:mr-auto lg:flex lg:gap-6">
-        <Button className="button-color">
-          <span>التسجيل</span>
+        <Button className="button-color text-black">
+          <a href="/Rigster">التسجيل</a>
         </Button>
-        <Button  className="button-border">
-          <span> تسجيل الدخول</span>
+        <Button  className="button-border text-black">
+          <a href="/Login"> تسجيل الدخول</a>
         </Button>
         </div>
         
@@ -106,12 +116,12 @@ export function NavbarSide() {
       <MobileNav open={openNav}>
         <div className="container flex flex-col justify-center items-center text-center">
           {navList}
-          <div className="mt-5 flex gap-5">
-          <Button className="button-color">
-          <span>التسجيل</span>
+          <div className="mt-5 flex gap-5 mb-10">
+          <Button className="button-color text-black">
+          <a href="/Rigster">التسجيل</a>
         </Button>
-        <Button  className="button-border">
-          <span> تسجيل الدخول</span>
+        <Button  className="button-border text-black">
+          <a href="/Login"> تسجيل الدخول</a>
         </Button>
           </div>
           

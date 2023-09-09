@@ -12,6 +12,12 @@ type Ishow ={
 }
 
 export default function Admin() {
+
+  const flag = localStorage.getItem("adminLog");
+  if (!flag) {
+    window.location.href = "/login";
+  }
+
 const [showUsers , setShowUsers] = React.useState<Ishow[]>([]);
 const [dataUsers , setDataUsers] = React.useState<Ishow>({
   id:"",
