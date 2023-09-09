@@ -1,5 +1,6 @@
 import axios from "axios"
 import React from "react"
+import AdminSidebar from "../component/AdminSidebar";
 
 type Ishow ={
   id:string;
@@ -39,10 +40,22 @@ function updateStatus() {
   return (
     <>
     <div>
+      <AdminSidebar/>
+    </div>
+    <div className="flex justify-end ml-3 mt-2">
+    <div>
+      <div className="flex gap-20 mb-1 ml-2 border bg-cc">
+      <label htmlFor="">الاسم</label> 
+      <label htmlFor="">الاسم</label> 
+      <label htmlFor="">الاسم</label> 
+      <label htmlFor="">الاسم</label> 
+      <label htmlFor="">الاسم</label> 
+      <label htmlFor="">الاسم</label> 
+      <label htmlFor="">الاسم</label> 
+      </div>
     {showUser.map((item)=> (
-      
-      <div className="flex gap-3 mb-1" key={item.id}>
-        
+      <div className="flex flex-col ga">
+      <div className="flex gap-3 mb-1 text-sm" key={item.id}>
       <p>{item.name}</p>
       <p>{item.id}</p>
       <p>{item.NId}</p>
@@ -52,9 +65,14 @@ function updateStatus() {
       <p>{item.status ? "مفعل" : "غير مفعل"}</p>
       <button className="border border-black w-auto" onClick={updateStatus}>تفعيل</button>
       </div>
+      <div>
+      <hr />
+      </div>
+      </div>
+      
 ))}
     </div>
-      
+    </div>
     </>
   )
 }
