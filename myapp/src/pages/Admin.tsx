@@ -55,12 +55,12 @@ function updateStatus() {
       </div>
     {showUser.map((item)=> (
       <div className="flex flex-col ga">
-      <div className="flex gap-3 mb-1 text-sm" key={item.id}>
+      <div className="flex gap-3 mb-1 text-sm mr-2" key={item.id}>
       <p>{item.name}</p>
-      <p>{item.NId}</p>
       <p>{item.email}</p>
-      <p>{item.phone}</p>
       <p>{item.iBan}</p>
+      <p>{item.NId}</p>
+      <p>{item.phone}</p>
       <p>{item.status ? "مفعل" : "غير مفعل"}</p>
       <button className="border border-black w-auto" onClick={updateStatus}>تفعيل</button>
       </div>
