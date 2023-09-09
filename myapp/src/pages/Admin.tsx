@@ -44,20 +44,19 @@ function updateStatus() {
     </div>
     <div className="flex justify-end ml-3 mt-2">
     <div>
-      <div className="flex gap-20 mb-1 ml-2 border bg-cc">
+      <div className="flex gap-16 mb-1 ml-2 border bg-cc">
       <label htmlFor="">الاسم</label> 
-      <label htmlFor="">الاسم</label> 
-      <label htmlFor="">الاسم</label> 
-      <label htmlFor="">الاسم</label> 
-      <label htmlFor="">الاسم</label> 
-      <label htmlFor="">الاسم</label> 
-      <label htmlFor="">الاسم</label> 
+      <label htmlFor="">الإيميل</label> 
+      <label htmlFor="">ايبان</label> 
+      <label htmlFor="">الهوية</label> 
+      <label htmlFor="">الجوال</label> 
+      <label htmlFor="">الحالة</label> 
+      <label htmlFor="">التفعيل</label> 
       </div>
     {showUser.map((item)=> (
       <div className="flex flex-col ga">
       <div className="flex gap-3 mb-1 text-sm" key={item.id}>
       <p>{item.name}</p>
-      <p>{item.id}</p>
       <p>{item.NId}</p>
       <p>{item.email}</p>
       <p>{item.phone}</p>
