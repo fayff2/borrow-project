@@ -15,6 +15,11 @@ const toggleSidebar = () => {
     console.log(isOpen)
   };
 
+  const logout = () => {
+    localStorage.removeItem("isLogin");
+    window.location.href = "/login" ;
+  };
+
   return (
     <div className="flex">
         
@@ -153,7 +158,7 @@ const toggleSidebar = () => {
                             <li className="border-b-neutral-400 border-b  ">
                                 <a
                                     href="#"
-                                    className="flex items-center p-2 space-x-3 rounded-md"
+                                    onClick={logout} className="flex items-center p-2 space-x-3 rounded-md"
                                 >
                                     <svg id='Logout_Circle_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' ><rect width='24' height='24' fill='#000000' opacity='0'/>
 
