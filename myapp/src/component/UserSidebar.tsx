@@ -13,7 +13,10 @@ const toggleSidebar = () => {
 
   return (
     <div className="flex ">
-            <div className={`h-screen w-64 fixed top-0  ${!isOpen ? "translate-x-0" : ""} transition-transform bg-cc text-white `}>
+        <button className="text-white focus:outline-none md:hidden " onClick={toggleSidebar}>
+                     <FontAwesomeIcon icon={faBars} size="lg" />
+                     </button>
+            <div className={`h-screen w-64 fixed top-0  ${!isOpen ? "translate-x-0" : "translate-x-full"} transition-transform bg-cc text-white `}>
                 <div className="space-y-3 ">
                     <div className="flex items-center justify-between mx-2">
                         <a href="/"><img src="./public/logo.svg" className='w-20 mr-4 mb-4' /></a>
@@ -23,7 +26,7 @@ const toggleSidebar = () => {
                     </div>
                     
                     {/* {!isOpen && ( */}
-                    <div className={`flex-1 ${!isOpen ?  "max-md:hidden":"" }  `}>
+                    <div className={`flex-1 ${!isOpen ?  "":"" }  `}>
                         
                         <ul className="pt-2 pb-4 space-y-1 text-sm flex flex-col ">
                             <li className="rounded-sm">

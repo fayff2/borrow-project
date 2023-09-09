@@ -6,7 +6,8 @@ export default {
   ],
   theme: {
     colors:{
-      cc:"#EFDED4"
+      cc:"#EFDED4",
+      myPurple:"#CEBFDE",
     },
     extend: {},
   },

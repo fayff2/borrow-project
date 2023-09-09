@@ -13,14 +13,14 @@ function App() {
 
   return (
    <>
-   <UserSidebar></UserSidebar>
-    {/* <Routes>
+   {/* <UserSidebar></UserSidebar> */}
+    <Routes>
       <Route path='/' element={<Rigster/>}></Route> 
       <Route path='/login' element={<Login/>}></Route>
       <Route path='/home' element={<Home/>}></Route>
       <Route path='/userProfile' element={<UserProfile/>}></Route>
       <Route path='/admin' element={<Admin/>}></Route>
-    </Routes> */}
+    </Routes>
    </>
   )
 }
