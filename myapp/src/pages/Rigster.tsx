@@ -3,6 +3,7 @@ import axios from "axios"
 import { useNavigate } from 'react-router-dom';
 import { NavbarSide } from '../component/NavbarSide';
 import Swal from 'sweetalert2'
+import Footer from "../component/Footer"
 
 
 export default function Rigster() {
@@ -33,9 +34,9 @@ export default function Rigster() {
         }else if (!email.includes("@")){
            Swal.fire("الرجاء ادخال بريد الكتروني صحيح")}
        else if (password === ""){
-           alert("الرجاء ادخال كلمة مرور")
+           Swal.fire("الرجاء ادخال كلمة مرور")
         }else if (password.length < 5){
-           alert("الرجاء ادخال كلمة مرور اكبر من 5 ارقام ")
+           Swal.fire("الرجاء ادخال كلمة مرور اكبر من 5 ارقام ")
         }else if(!iBan.startsWith("SA") ){
           Swal.fire("الرجاء ادخال حساب ايبان صحيح")
         }else if (NId === ""){
@@ -133,6 +134,10 @@ export default function Rigster() {
   </div>
  
 </div>
+</div>
+<div className="py-3 border">
+
+<Footer/>
 </div>
 </div>
   

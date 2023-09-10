@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { NavbarSide } from '../component/NavbarSide';
 import Swal from 'sweetalert2'
+import Footer from "../component/Footer"
 
 type event = {
     email: string;
@@ -101,6 +102,11 @@ export default function Login() {
  
 </div>
 </div>
+<div className="py-3 border">
+
+<Footer/>
+</div>
+
 </div>
 
 

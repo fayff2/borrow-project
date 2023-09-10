@@ -1,4 +1,5 @@
 import UserSidebar from "../component/UserSidebar";
+// import Footer from "../component/Footer"
 
 export default function Home() {
 
@@ -10,7 +11,20 @@ export default function Home() {
 
   return (
    <>
-   <UserSidebar/>
+   <div className="flex">
+    <div className=" border lg:w-64">
+    <UserSidebar/>
+      </div> 
+
+  <div className="">
+    home
+  </div>
+
+  </div>
+  {/* <div className="py-3 border">
+
+<Footer/>
+</div> */}
    
 
    </>
