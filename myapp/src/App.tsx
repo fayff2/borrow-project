@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import UserProfile from './pages/UserProfile'
 import Admin from './pages/Admin'
 import Start from './pages/Start'
+import BorrowRequest from './pages/BorrowRequest'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
       <Route path='/home' element={<Home/>}></Route>
       <Route path='/userProfile' element={<UserProfile/>}></Route>
       <Route path='/admin' element={<Admin/>}></Route>
+      <Route path='/borrowrequest' element={<BorrowRequest/>}></Route>
     </Routes>
    </>
   )

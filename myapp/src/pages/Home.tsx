@@ -12,7 +12,7 @@ export default function Home() {
   return (
    <>
    <div className="flex">
-    <div className=" border lg:w-64">
+    <div className="lg:w-64">
     <UserSidebar/>
       </div> 
 
