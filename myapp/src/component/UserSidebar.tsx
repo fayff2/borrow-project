@@ -16,7 +16,7 @@ const toggleSidebar = () => {
         <button className="text-white focus:outline-none md:hidden " onClick={toggleSidebar}>
                      <FontAwesomeIcon icon={faBars} size="lg" />
                      </button>
-            <div className={`h-screen w-64 fixed top-0  ${!isOpen ? "translate-x-0" : "translate-x-full"} transition-transform bg-cc text-white `}>
+            <div className={`h-screen w-64 fixed top-0  ${!isOpen ? "max-md:translate-x-0" : "max-sm:translate-x-full"} transition-transform bg-cc text-white `}>
                 <div className="space-y-3 ">
                     <div className="flex items-center justify-between mx-2">
                         <a href="/"><img src="/logo.svg" className='w-20 mr-4 mb-4' /></a>
@@ -26,7 +26,7 @@ const toggleSidebar = () => {
                     </div>
                     
                     {/* {!isOpen && ( */}
-                    <div className={`flex-1 ${!isOpen ?  "":"" }  `}>
+                    <div className={`flex-1`}>
                         
                         <ul className="pt-2 pb-4 space-y-1 text-sm flex flex-col ">
                             <li className="rounded-sm">
@@ -41,7 +41,7 @@ const toggleSidebar = () => {
                             </li>
                             <li className="rounded-sm">
                                 <a
-                                    href="#"
+                                    href="/borrowrequest"
                                     className="flex items-center p-2 space-x-3 rounded-md"
                                 >
                                     

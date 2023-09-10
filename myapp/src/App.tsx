@@ -7,6 +7,8 @@ import UserProfile from './pages/UserProfile'
 import Admin from './pages/Admin'
 import Start from './pages/Start'
 import UserDetails from './pages/UserDetails'
+import BorrowRequest from './pages/BorrowRequest'
+import SendBorrow from './pages/SendBorrow'
 
 function App() {
 
@@ -21,6 +23,8 @@ function App() {
       <Route path='/userProfile' element={<UserProfile/>}></Route>
       <Route path='/admin' element={<Admin/>}></Route>
       <Route path='/userdetails' element={<UserDetails/>}></Route>
+      <Route path='/borrowrequest' element={<BorrowRequest/>}></Route>
+      <Route path='/sendborrow' element={<SendBorrow/>}></Route>
     </Routes>
    </>
   )
