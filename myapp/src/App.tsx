@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import UserProfile from './pages/UserProfile'
 import Admin from './pages/Admin'
 import Start from './pages/Start'
+import UserDetails from './pages/UserDetails'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
       <Route path='/home' element={<Home/>}></Route>
       <Route path='/userProfile' element={<UserProfile/>}></Route>
       <Route path='/admin' element={<Admin/>}></Route>
+      <Route path='/userdetails' element={<UserDetails/>}></Route>
     </Routes>
    </>
   )
