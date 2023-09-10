@@ -38,5 +38,9 @@ padding: 5px;
     }
     .bg-sidebar{
         background-color: #F6EDE8;
+        
+    }
+    .bg-card{
+        background-color: #F8F2EE;
     }
     

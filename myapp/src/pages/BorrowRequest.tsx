@@ -1,11 +1,14 @@
 import React from "react"
 import axios from "axios"
+import UserSidebar from "../component/UserSidebar"
+import { Breadcrumbs } from "@material-tailwind/react"
 
 type Iborrow = {
     name : string;
     amount: number;
     package: string;
     total: number;
+
 
 }
 
@@ -17,6 +20,7 @@ export default function BorrowRequest() {
         amount: 0,
         package:"",
         total: 0,
+       
     })
     const [total , setTotal ] = React.useState("")
 
@@ -64,22 +68,63 @@ export default function BorrowRequest() {
 
     }
   return (
-    <div>
+    <div className="flex gap-20">
+    <div className="lg:w-64">
+    <UserSidebar/>
+      </div>
 
-        <input type="text" placeholder="ادخل الاسم الثلاثي" className="border" onChange={e=>setDataBorrow({...dataBorrow, name:e.target.value})}/><br/>
-        <input type="number"  placeholder="ادخل المبلغ " className="border" value={dataBorrow.amount} onChange={e=>setDataBorrow({...dataBorrow, amount:Number(e.target.value)})}/><br/>
+      <div className=" w-full mt-20">
+<Breadcrumbs>
+      <a href="/Home" className="opacity-60">الرئيسية</a>
+     
+      <a href="/BorrowRequest" >
+       طلب سلف
+      </a>
+    </Breadcrumbs>
+    <div className=" flex  flex-col items-center justify-center">
+        <div className="border border-black  w-3/5 flex flex-col gap-5 p-5 ">
 
-        <button value={"4"} onClick={(e)=>{test(e)
-        setDataBorrow({...dataBorrow , package:"4"})}} >بكج 4</button>
+<div className="flex  flex-col gap-5 justify-center items-center lg:flex-row">
+
+<div className="">
+<label>الاسم</label><br></br>
+<input type="text" placeholder="ادخل الاسم الثلاثي" className=" w-60 border border-black"  onChange={e=>setDataBorrow({...dataBorrow, name:e.target.value})}/>
+      
+</div>
+
+    <div className="">
+     <label>المبلغ</label><br></br>
+     <input type="number"  placeholder="ادخل المبلغ " className=" w-60 border border-black" value={dataBorrow.amount} onChange={e=>setDataBorrow({...dataBorrow, amount:Number(e.target.value)})}/>
+    </div>
+ 
+
+
+
+</div>
+    
+<div className="flex  flex-col gap-5 justify-center items-center lg:flex-row">
+<button value={"4"} onClick={(e)=>{test(e)
+        setDataBorrow({...dataBorrow , package:"4"})}} className="bg-purple w-60  h-14" >4 شهور هامش الربح  10%</button>
+
       <button value={"2"}  onClick={(e)=>{test(e) 
-      setDataBorrow({...dataBorrow , package:"2"})
-    
-    
-    }} >بكج 2</button>
-        <button  onClick={postBorrow}>اضافه</button>
-        
+      setDataBorrow({...dataBorrow , package:"2"})}} className="bg-purple w-60 h-14" > شهرين هامش الربح  5%</button>
+</div>
+       
+        <div className="">
+            <h1>المجموع :</h1>
         <h1>{total}</h1>
+        </div>
+     
+       
+    </div>
+    <button  onClick={postBorrow} className="button-color mt-5">اضافه</button>
+
+       
+
+
+        </div>
         
+    </div>
     </div>
   )
 }
