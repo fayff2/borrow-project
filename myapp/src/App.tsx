@@ -9,6 +9,7 @@ import Start from './pages/Start'
 import UserDetails from './pages/UserDetails'
 import BorrowRequest from './pages/BorrowRequest'
 import SendBorrow from './pages/SendBorrow'
+import Pay from './pages/pay'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
       <Route path='/userdetails' element={<UserDetails/>}></Route>
       <Route path='/borrowrequest' element={<BorrowRequest/>}></Route>
       <Route path='/sendborrow/:id' element={<SendBorrow/>}></Route>
+      <Route path='/pay' element={<Pay/>}></Route>
     </Routes>
    </>
   )

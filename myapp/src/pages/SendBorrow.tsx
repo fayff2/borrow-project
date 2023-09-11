@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 type IBorrow = {
   name: string;
@@ -13,6 +13,7 @@ type IBorrow = {
 export default function SendBorrow() {
   const [borrowDetails, setBorrowDetails] = useState<IBorrow[]>([]);
   const { id } = useParams();
+  const navigate =useNavigate();
 
   useEffect(() => {
     axios
@@ -34,13 +35,12 @@ export default function SendBorrow() {
           <p>المبلغ: {borrowDetails.amount}</p>
           <p>عدد الدفعات: {borrowDetails.package}</p>
           <p>المجموع: {borrowDetails.total}</p>
-          <p>: {borrowDetails.id}</p>
         </div>
 
 
       <h3>طرق التسليف:</h3>
       <div className='flex flex-col gap-2 w-80'>
-        <button className='border'>سحب بطافة الإتمان</button>
+        <button className='border' onClick={() => {navigate("/pay")}}>سحب بطافة الإتمان</button>
         <button className='border'>Paypal</button>
       </div>
     </div>
