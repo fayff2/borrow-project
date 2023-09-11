@@ -71,7 +71,7 @@ const toggleSidebar = () => {
                             </li>
                             <li className="rounded-sm">
                                 <a
-                                    href="#"
+                                    href="/userprofile"
                                     className="flex items-center p-2 space-x-3 rounded-md"
                                 >
                                     

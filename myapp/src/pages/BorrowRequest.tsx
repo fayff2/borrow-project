@@ -6,6 +6,7 @@ type Iborrow = {
     amount: number;
     package: string;
     total: number;
+    id: string;
 
 }
 
@@ -17,8 +18,10 @@ export default function BorrowRequest() {
         amount: 0,
         package:"",
         total: 0,
+        id: "",
     })
     const [total , setTotal ] = React.useState("")
+
 
     const postBorrow = ()=>{
         axios.post("https://64fc93ca605a026163aea289.mockapi.io/SendBorrow",{
@@ -26,6 +29,7 @@ export default function BorrowRequest() {
             amount:dataBorrow.amount,
             package:dataBorrow.package,
             total: total,
+            id: dataBorrow.id
 
      } )
         .then(res =>{
@@ -60,6 +64,7 @@ export default function BorrowRequest() {
 
             
         }
+        
        
 
     }

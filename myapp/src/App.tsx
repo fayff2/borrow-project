@@ -24,7 +24,7 @@ function App() {
       <Route path='/admin' element={<Admin/>}></Route>
       <Route path='/userdetails' element={<UserDetails/>}></Route>
       <Route path='/borrowrequest' element={<BorrowRequest/>}></Route>
-      <Route path='/sendborrow' element={<SendBorrow/>}></Route>
+      <Route path='/sendborrow/:id' element={<SendBorrow/>}></Route>
     </Routes>
    </>
   )
