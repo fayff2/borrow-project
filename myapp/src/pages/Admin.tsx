@@ -72,8 +72,9 @@
 //   )
 // }
 
+import React from "react";
 import axios from "axios"
-import React, { useState } from "react"
+// import React, { useState } from "react"
 import AdminSidebar from "../component/AdminSidebar";
 
 type Ishow ={
@@ -116,17 +117,15 @@ export default function Admin() {
         setShowUser(updatedUsers);
       console.log(res.data.status)
     })
-    .catch((error) => {
-      console.error("Error updating user state:", error);
-    });
+    
  
 }
 
-const [fieldValue, setFieldValue] = useState("");
+// const [fieldValue, setFieldValue] = useState("");
 
-const handleFieldChange = (e) => {
-  setFieldValue(e.target.value);
-};
+// const handleFieldChange = (e) => {
+//   setFieldValue(e.target.value);
+// };
 
   return (
     <>
@@ -138,92 +137,41 @@ const handleFieldChange = (e) => {
  
 
     <div className="w-full">
-      <h1 className="text-center mt-20">حسابات المستخدمين</h1>
-      <div className=" flex gap-10 justify-center"> <span>الاسم</span>
+      <h1 className="text-center mt-20 mb-5 text-lg font-bold">حسابات المستخدمين</h1>
+      <div className=" flex justify-center flex-col items-center">
+      <div className=" flex  gap-24 justify-center bg-card w-5/6">
+         <span>الاسم</span>
+      <span>الهويه الوطنية</span>
       <span> البريد الالكتروني</span>
       <span>الايبان</span>
-      <span>الهويه الوطنية</span>
       <span>رقم الجوال</span>
       <span>الحاله</span>
   
       </div>
 
+
       
-    {Array.isArray(showUser) &&showUser.map((item)=> (
+    {showUser.map((item)=> (
    
-      <div className="flex flex-col" key={item.id}>
+      <div className="flex  gap-24 justify-center border-b py-3 w-5/6" key={item.id}>
         <hr className="text-myPurple"/>
 
-      <div className="flex gap-3 mb-10 text-sm mr-2 justify-center" >
-        <div className="grid grid-cols-3 items-center gap-2 ">
-        <div className="flex flex-col">  
-        
-      <input 
-      className=""
-       type="text"
-       value={item.name}
-       onChange={handleFieldChange}
-        />
-        </div>
-        <div className="flex flex-col"> 
- 
-      <input 
-      className=""
-       type="text"
-       value={item.email}
-       onChange={handleFieldChange}
-        />
-        </div>
-        <div className="flex flex-col">  
-      
-      <input 
-      className=""
-       type="text"
-       value={item.iBan}
-       onChange={handleFieldChange}
-        />
-        </div>
-        <div className="flex flex-col">  
-       
-      <input 
-      className=""
-       type="text"
-       value={item.NId}
-       onChange={handleFieldChange}
-        />
-        </div>
+      <div className=" flex gap-10 justify-center w-5/6 items-center" >
 
-
-        <div className="flex flex-col">  
- 
-      <input 
-      className=""
-       type="text"
-       value={item.phone}
-       onChange={handleFieldChange}
-        />
-        </div>
-
-
-        <div className="flex flex-col">  
-         
-      <input 
-      className=""
-       type="text"
-       value={item.status? "غير مفعل" : "مفعل"}
-       onChange={handleFieldChange}
-        />
-        </div> 
+      <p>{item.name}</p>
+      <p>{item.NId}</p>
+      <p>{item.email}</p>
+      <p>{item.iBan}</p>
+      <p>{item.phone}</p>
+      <p>{item.status? "مفعل " :"غير مفعل"}</p>
       </div>
-      <button className=" bg-myPurple w-auto mt-3 " onClick={() =>updateStatus(item.id, item.status)}>تفعيل</button>
-      </div>
+      <button className="button-color" onClick={() =>updateStatus(item.id, item.status)}>تفعيل</button>
       <div>
       <hr className="text-myPurple" />
       </div>
       </div>
-      
-      // <p>{item.status ? "مفعل" : "غير مفعل"}</p>
 ))}
+</div>
     </div>
     </div>
     </>

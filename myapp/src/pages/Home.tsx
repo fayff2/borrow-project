@@ -5,9 +5,11 @@ import axios from "axios";
 import { Breadcrumbs } from "@material-tailwind/react"
 import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2'
+import { Link } from "react-router-dom";
 
 
 type Iborrow = {
+  id:string;
   name : string;
   amount: number;
   package: string;
@@ -88,7 +90,8 @@ return(
       <div className="flex"> <h3>المبلغ :</h3><p>{item.amount}</p></div>
       <div className="flex"> <h3>الدفعات :</h3> <p>{item.package} دفعات</p></div>
       
-      <div className="flex"><button className="button-color mx-auto my-0"> تسليف</button></div>
+      <Link to={`/SendBorrow/${item.id}`}>
+      <div className="flex"><button className="button-color mx-auto my-0"> تسليف</button></div></Link>
        
   </div>
   </div>

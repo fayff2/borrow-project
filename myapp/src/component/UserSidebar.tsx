@@ -85,7 +85,7 @@ const toggleSidebar = () => {
                                 </a>
                                
                             </li>
-                            <li className="border-b-neutral-400 border-b " >
+                            {/* <li className="border-b-neutral-400 border-b " >
                                 <a
                                     href="#"
                                     className="flex items-center p-2 space-x-3 rounded-md gap-3"
@@ -103,7 +103,7 @@ const toggleSidebar = () => {
                                     <span>طلبات السلف</span>
                                 </a>
                                 
-                            </li>
+                            </li> */}
                             <li className="border-b-neutral-400 border-b  ">
                                 <a
                                     href="#"
@@ -140,7 +140,7 @@ const toggleSidebar = () => {
                             </li>
                             <li className="border-b-neutral-400 border-b  ">
                                 <a
-                                    href="#"
+                                    href="/UserProfile"
                                     className="flex items-center p-2 space-x-3 rounded-md gap-3"
                                 >
                                     

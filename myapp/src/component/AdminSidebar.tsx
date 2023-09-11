@@ -68,7 +68,7 @@ const toggleSidebar = () => {
                         <ul className="pt-2 pb-4 space-y-1 flex flex-col  text-lg gap-3">
                             <li className=" border-b-neutral-400 border-b ">
                                 <a
-                                    href="/Home"
+                                    href="/Admin"
                                     className=" flex gap-2 p-2 space-x-3 rounded-md text-black"
                                 >
                                     
@@ -87,7 +87,7 @@ const toggleSidebar = () => {
                             </li>
                             <li className="border-b-neutral-400 border-b " >
                                 <a
-                                    href="#"
+                                    href="/adminborrowreq"
                                     className="flex items-center p-2 space-x-3 rounded-md gap-3"
                                 >
                                         
@@ -104,7 +104,7 @@ const toggleSidebar = () => {
                                 </a>
                                 
                             </li>
-                            <li className="border-b-neutral-400 border-b  ">
+                            <li className="border-b-neutral-400 border-b">
                                 <a
                                     href="#"
                                     className="flex items-center p-2 space-x-3 rounded-md gap-3"
@@ -119,7 +119,7 @@ const toggleSidebar = () => {
                                 </a>
                              
                             </li>
-                            <li className="border-b-neutral-400 border-b">
+                            {/* <li className="border-b-neutral-400 border-b">
                                 <a
                                     href="#"
                                     className="flex items-center p-2 space-x-3 rounded-md gap-3"
@@ -137,7 +137,7 @@ const toggleSidebar = () => {
                                     <span>حسابات المستخدمين</span>
                                 </a>
                                 
-                            </li>
+                            </li> */}
                             
                             <li className="border-b-neutral-400 border-b  ">
                                 <a

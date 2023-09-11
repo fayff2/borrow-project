@@ -2,12 +2,14 @@ import React from "react"
 import axios from "axios"
 import UserSidebar from "../component/UserSidebar"
 import { Breadcrumbs } from "@material-tailwind/react"
+import { Link } from "react-router-dom"
 
 type Iborrow = {
     name : string;
     amount: number;
     package: string;
     total: number;
+    
 
 
 }
@@ -117,7 +119,8 @@ export default function BorrowRequest() {
      
        
     </div>
-    <button  onClick={postBorrow} className="button-color mt-5">اضافه</button>
+    <Link to="/home">
+    <button  onClick={postBorrow} className="button-color mt-5">اضافه</button></Link>
 
        
 
