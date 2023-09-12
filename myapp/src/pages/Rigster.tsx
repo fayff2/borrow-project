@@ -3,6 +3,7 @@ import axios from "axios"
 import { useNavigate } from 'react-router-dom';
 import { NavbarSide } from '../component/NavbarSide';
 import Swal from 'sweetalert2'
+import Footer from "../component/Footer"
 
 
 export default function Rigster() {
@@ -33,9 +34,9 @@ export default function Rigster() {
         }else if (!email.includes("@")){
            Swal.fire("الرجاء ادخال بريد الكتروني صحيح")}
        else if (password === ""){
-           alert("الرجاء ادخال كلمة مرور")
+           Swal.fire("الرجاء ادخال كلمة مرور")
         }else if (password.length < 5){
-           alert("الرجاء ادخال كلمة مرور اكبر من 5 ارقام ")
+           Swal.fire("الرجاء ادخال كلمة مرور اكبر من 5 ارقام ")
         }else if(!iBan.startsWith("SA") ){
           Swal.fire("الرجاء ادخال حساب ايبان صحيح")
         }else if (NId === ""){
@@ -54,21 +55,7 @@ export default function Rigster() {
   return (
   <>
   
-{/* <div className="">
-    <label>الاسم</label> <br/>
-    <input type="text"  className='border' onChange={e => setInputValue({...inputValue,name:e.target.value})}/> <br/>
-    <label>الهويه الوطنيه</label><br/>
-    <input type="text" className='border' onChange={e => setInputValue({...inputValue,NId:e.target.value})}/><br/>
-    <label>الايبان</label><br/>
-    <input type="text" className='border' onChange={e => setInputValue({...inputValue,iBan:e.target.value})}/><br/>
-    <label>الايميل</label><br/>
-    <input type="text"  className='border' onChange={e => setInputValue({...inputValue,email:e.target.value})}/><br/>
-    <label> رقم الجوال </label><br/>
-    <input type="text"  className='border' onChange={e => setInputValue({...inputValue,phone:e.target.value})}/><br/>
-    <label>الرقم السري</label><br/>
-    <input type="password" className='border' onChange={e => setInputValue({...inputValue,password:e.target.value})}/><br/>
-    <button onClick={submitData}>تسجيل </button>
-</div> */}
+
   <div className="bg-img h-full">
    <NavbarSide/>
 
@@ -76,6 +63,7 @@ export default function Rigster() {
 <div className="w-full max-w-xs lg:max-w-xl">
   <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
 
+<h1 className='text-center text-2xl my-4 font-bold'>التسجيل</h1>
     <div className="mb-4">
       <label className="block text-gray-700 text-sm font-bold mb-2">
           الاسم 
@@ -118,11 +106,11 @@ export default function Rigster() {
       <label className="block text-gray-700 text-sm font-bold mb-2">
      كلمة المرور
       </label>
-      <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"   type="password" placeholder="********" onChange={e => setInputValue({...inputValue,password:e.target.value})}/>
+      <input className="shadow appearance-none border rounded w-full py-2 px-3 mb-3 leading-tight focus:outline-none focus:shadow-outline "   type="password" placeholder="********" onChange={e => setInputValue({...inputValue,password:e.target.value})}/>
     </div>
     <div className="flex items-center justify-between gap-10">
 
-      <button className="bg-purple  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onClick={submitData}>
+      <button className="bg-light-blue font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onClick={submitData}>
       تسجيل 
       </button>
 
@@ -133,6 +121,10 @@ export default function Rigster() {
   </div>
  
 </div>
+</div>
+<div className="py-3 border">
+
+<Footer/>
 </div>
 </div>
   

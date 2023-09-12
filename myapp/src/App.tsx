@@ -1,3 +1,4 @@
+
 import './App.css'
 import {Routes , Route} from 'react-router-dom'
 import Rigster from './pages/Rigster'
@@ -6,11 +7,11 @@ import Home from './pages/Home'
 import UserProfile from './pages/UserProfile'
 import Admin from './pages/Admin'
 import Start from './pages/Start'
-import UserDetails from './pages/UserDetails'
 import BorrowRequest from './pages/BorrowRequest'
+import AdminBorrowR from './pages/AdminBorrowR' 
 import SendBorrow from './pages/SendBorrow'
-import Pay from './pages/pay'
-
+import Payment from './pages/Payment'
+// import Invoice from './pages/Invoice'
 function App() {
 
 
@@ -23,10 +24,12 @@ function App() {
       <Route path='/home' element={<Home/>}></Route>
       <Route path='/userProfile' element={<UserProfile/>}></Route>
       <Route path='/admin' element={<Admin/>}></Route>
-      <Route path='/userdetails' element={<UserDetails/>}></Route>
       <Route path='/borrowrequest' element={<BorrowRequest/>}></Route>
-      <Route path='/sendborrow/:id' element={<SendBorrow/>}></Route>
-      <Route path='/pay' element={<Pay/>}></Route>
+      <Route path='/adminborrowreq' element={<AdminBorrowR/>}></Route>
+      <Route path='/SendBorrow/:id' element={<SendBorrow/>}></Route>
+      <Route path='/payment' element={<Payment/>}></Route>
+      {/* <Route path='/invoice/:id' element={<Invoice/>}></Route> */}
+
     </Routes>
    </>
   )

@@ -5,10 +5,11 @@ import axios from "axios";
 import { Breadcrumbs } from "@material-tailwind/react"
 import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2'
+import { Link } from "react-router-dom";
 
 
 type Iborrow = {
-  id:string
+  id:string;
   name : string;
   amount: number;
   package: string;
@@ -66,8 +67,8 @@ const checkState =()=>{
 
   return (
    <>
-   <div className="flex gap-20">
-    <div className="lg:w-64">
+   <div className="lg:flex lg:gap-20">
+    <div className="lg:w-64 shadow-md">
     <UserSidebar/>
       </div> 
 
@@ -79,7 +80,7 @@ const checkState =()=>{
     
     <button className="button-color" onClick={checkState}>طلب</button>
     </div>
-  <div className="flex flex-wrap gap-5 mt-10">
+  <div className="flex flex-wrap  justify-center items-center gap-5 mt-10">
     {borrowData.map((item)=>{
 
 return(
@@ -89,7 +90,8 @@ return(
       <div className="flex"> <h3>المبلغ :</h3><p>{item.amount}</p></div>
       <div className="flex"> <h3>الدفعات :</h3> <p>{item.package} دفعات</p></div>
       
-      <div className="flex"><button className="button-color mx-auto my-0" onClick={() => {navigate(`/sendborrow/${item.id}`)}}> تسليف</button></div>
+      <Link to={`/SendBorrow/${item.id}`}>
+      <div className="flex"><button className="button-color mx-auto my-0"> تسليف</button></div></Link>
        
   </div>
   </div>

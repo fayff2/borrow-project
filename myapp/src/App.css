@@ -5,7 +5,7 @@
 
 }
 
-.bg-img{
+/* .bg-img{
     background-image:
     linear-gradient(
       to bottom right,  
@@ -13,26 +13,53 @@
     );
     height: 100vh;
     width: 100%;
+} */
+
+
+.bg-img{
+    background-image: url("./assets/bgstart.svg");
+    background-position: center top;
+    background-repeat: no-repeat;
+   background-size: cover;
 }
 
 .button-color{
-background-color: #CEBFDE !important;
+background-color:  #8794BA !important;
 width: 100px;
 border-radius: 5px;
 padding: 5px;
+color:white !important;
 
 }
 
 .button-border{
-    border: 2px solid #CEBFDE !important;
+    border: 2px solid  #8794BA!important;
     width: 100px;
     padding: 5px;
     border-radius: 5px;
+    color:white !important;
 
 
+    }
+
+    .color-purple{
+        color:#C8C9EE;
+    }
+
+    .bg-light-blue{
+    background-color: #8794BA !important;
+    color: white !important; 
     }
 
     .bg-purple{
       
         background-color: #CEBFDE !important;
     }
+    .bg-sidebar{
+        background-color: #172755;
+        
+    }
+    .bg-card{
+        background-color: white;
+    }
+    

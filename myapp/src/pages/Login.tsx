@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { NavbarSide } from '../component/NavbarSide';
 import Swal from 'sweetalert2'
+import Footer from "../component/Footer"
 
 type event = {
     email: string;
@@ -91,7 +92,7 @@ export default function Login() {
     </div>
     <div className="flex items-center justify-between gap-10">
 
-      <button className="bg-purple font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onClick={submitLogin}>
+      <button className="bg-light-blue font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onClick={submitLogin}>
       تسجيل الدخول 
       </button>
 
@@ -101,6 +102,11 @@ export default function Login() {
  
 </div>
 </div>
+<div className="py-3 border">
+
+<Footer/>
+</div>
+
 </div>
 
 
