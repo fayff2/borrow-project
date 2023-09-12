@@ -9,7 +9,7 @@ type Iborrow = {
     amount: number;
     package: string;
     total: number;
-    
+
 
 
 }
@@ -70,8 +70,8 @@ export default function BorrowRequest() {
 
     }
   return (
-    <div className="flex gap-20">
-    <div className="lg:w-64">
+    <div className="lg:flex lg:gap-20">
+    <div className="lg:w-64 shadow-md">
     <UserSidebar/>
       </div>
 
@@ -83,8 +83,9 @@ export default function BorrowRequest() {
        طلب سلف
       </a>
     </Breadcrumbs>
-    <div className=" flex  flex-col items-center justify-center">
-        <div className="border border-black  w-3/5 flex flex-col gap-5 p-5 ">
+    
+    <div className="flex  items-center justify-center lg:mt-32 mt-24">
+        <div className="border border-black  flex flex-col gap-10 p-5 h-72 text-lg">
 
 <div className="flex  flex-col gap-5 justify-center items-center lg:flex-row">
 
@@ -106,10 +107,10 @@ export default function BorrowRequest() {
     
 <div className="flex  flex-col gap-5 justify-center items-center lg:flex-row">
 <button value={"4"} onClick={(e)=>{test(e)
-        setDataBorrow({...dataBorrow , package:"4"})}} className="bg-purple w-60  h-14" >4 شهور هامش الربح  10%</button>
+        setDataBorrow({...dataBorrow , package:"4"})}} className="bg-light-blue w-60  h-14" >4 شهور هامش الربح  10%</button>
 
       <button value={"2"}  onClick={(e)=>{test(e) 
-      setDataBorrow({...dataBorrow , package:"2"})}} className="bg-purple w-60 h-14" > شهرين هامش الربح  5%</button>
+      setDataBorrow({...dataBorrow , package:"2"})}} className="bg-light-blue w-60 h-14" > شهرين هامش الربح  5%</button>
 </div>
        
         <div className="">
@@ -119,15 +120,20 @@ export default function BorrowRequest() {
      
        
     </div>
-    <Link to="/home">
-    <button  onClick={postBorrow} className="button-color mt-5">اضافه</button></Link>
+    
+  
 
        
 
 
         </div>
+        <div className="flex justify-center">
+    <Link to="/home">
+    <button  onClick={postBorrow} className="button-color mt-5">اضافه</button></Link>
+    </div>
+    </div>
         
     </div>
-    </div>
+   
   )
 }

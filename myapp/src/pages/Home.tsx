@@ -67,8 +67,8 @@ const checkState =()=>{
 
   return (
    <>
-   <div className="flex gap-20">
-    <div className="lg:w-64">
+   <div className="lg:flex lg:gap-20">
+    <div className="lg:w-64 shadow-md">
     <UserSidebar/>
       </div> 
 
@@ -80,7 +80,7 @@ const checkState =()=>{
     
     <button className="button-color" onClick={checkState}>طلب</button>
     </div>
-  <div className="flex flex-wrap gap-5 mt-10">
+  <div className="flex flex-wrap  justify-center items-center gap-5 mt-10">
     {borrowData.map((item)=>{
 
 return(

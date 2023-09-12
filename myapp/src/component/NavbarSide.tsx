@@ -6,7 +6,7 @@ import {
   Button,
   IconButton,
 } from "@material-tailwind/react";
-import Logo from '../assets/logo.svg'
+import Logo from '../assets/logo2.svg'
  
 export function NavbarSide() {
   const [openNav, setOpenNav] = React.useState(false);
@@ -22,8 +22,8 @@ export function NavbarSide() {
     <ul className="text-center  flex flex-col items-start lg:mb-0 lg:mt-0 lg:mr-10 lg:flex-row lg:items-center lg:gap-6 ">
       <Typography
         as="li"
-        variant="small"
-        color="blue-gray"
+       
+        color="white"
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
@@ -32,8 +32,8 @@ export function NavbarSide() {
       </Typography>
       <Typography
         as="li"
-        variant="small"
-        color="blue-gray"
+       
+        color="white"
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
@@ -42,8 +42,7 @@ export function NavbarSide() {
       </Typography>
       <Typography
         as="li"
-        variant="small"
-        color="blue-gray"
+        color="white"
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
@@ -59,7 +58,7 @@ export function NavbarSide() {
       <div className="container flex justify-between items-center ">
         <Typography
           as="a"
-          href="#"
+          href="/"
           className=" cursor-pointer font-medium"
         >
        <img src={Logo} alt=""  className=" w-32 h-32"/>
@@ -117,10 +116,10 @@ export function NavbarSide() {
         <div className="container flex flex-col justify-center items-center text-center">
           {navList}
           <div className="mt-5 flex gap-5 mb-10">
-          <Button className="button-color text-black">
+          <Button className="button-color">
           <a href="/Rigster">التسجيل</a>
         </Button>
-        <Button  className="button-border text-black">
+        <Button  className="button-border">
           <a href="/Login"> تسجيل الدخول</a>
         </Button>
           </div>

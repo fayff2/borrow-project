@@ -2,6 +2,8 @@ import  { useEffect, useState } from 'react';
 import axios from "axios";
 import { useParams } from 'react-router-dom'
 import UserSidebar from '../component/UserSidebar';
+import { Breadcrumbs } from "@material-tailwind/react"
+import { Link } from 'react-router-dom';
 
 type Iborrow={
     
@@ -29,24 +31,50 @@ function SendBorrow() {
     }, [id])
     return (
         <>
-        <div className="flex gap-20">
-    <div className="lg:w-64">
+        <div className="lg:flex lg:gap-20">
+    <div className="lg:w-64 shadow-md">
     <UserSidebar/>
       </div> 
 
       <div className=" w-full mt-20">
-     <div className="flex flex-col justify-center">
+
+      <Breadcrumbs>
+      <a href="/Home" className="opacity-60">الرئيسية</a>
+     
+      <a href="/BorrowRequest" >
+     تسليف
+      </a>
+    </Breadcrumbs>
+
+
+     <div className="flex items-center justify-center lg:mt-32 mt-24">
           {state.map(item =>{
             return(
-                <div className="flex  w-3/5 h-52 border border-black rounded  text-lg   p-3 justify-center">
-                <div className="flex gap-20">
-              <p> <h1>الاسم</h1>{item.name}</p> 
-              <p> <h1>المبلغ </h1>{item.amount}</p> 
+                <div className=" w-full lg:w-3/4 h-52 border  border-black rounded  text-lg flex flex-col  gap-10 items-center justify-center  p-3 ">
+                    <div className="flex gap-5">
+                    <div className="flex gap-2 border border-black p-1  w-44 lg:w-60">
+                <h1>الاسم :</h1> <p>{item.name}</p> 
                 </div>
-                <div className="flex gap-20">
-                <p> <h1>الدفعات </h1>{item.package} شهور</p>
-              <p> <h1>المجموع</h1>{item.total}</p>
+            
+            <div className="flex gap-2 border border-black p-1  w-44 lg:w-60">
+            <h1>المبلغ :</h1> <p>{item.amount}</p> 
+            </div>
+                    </div>
+                
+
+<div className="flex gap-5">
+<div className="flex gap-2 lg:w-60">
+               <h1>الدفعات </h1> <p> {item.package} شهور</p>
+               </div>
+        
+                
+                <div className="flex gap-2 lg:w-60">
+                <h1>المجموع :</h1>   <p> {item.total}</p>
                 </div>
+</div>
+             
+             
+               
             
           
                 
@@ -55,12 +83,23 @@ function SendBorrow() {
     
             )
           })}
-            <div className="">
-            <h3>طرق التسليف :</h3>
-            <button>سحب بطاقة الائتمان</button><br></br>
-            <button>PayPal</button>
-            </div>
+            
           </div>
+          <div className=" my-20  mx-3">
+            <h1 className='text-xl font-bold my-4 '>طرق التسليف :</h1>
+            <Link to={"/payment"}>
+            <div className="flex justify-center">
+                
+            <button className='bg-light-blue w-72 lg:w-2/4 p-2 '>سحب بطاقة الائتمان</button>
+            </div>
+            </Link>
+            <Link to={"/payment"}>
+            <div className="flex justify-center mt-2">
+            
+            <button className='bg-light-blue w-72 lg:w-2/4  p-2 '>PayPal</button>
+            </div>
+            </Link>
+            </div>
           </div>
           </div>
         </>

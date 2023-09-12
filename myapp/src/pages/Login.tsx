@@ -92,7 +92,7 @@ export default function Login() {
     </div>
     <div className="flex items-center justify-between gap-10">
 
-      <button className="bg-purple font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onClick={submitLogin}>
+      <button className="bg-light-blue font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onClick={submitLogin}>
       تسجيل الدخول 
       </button>
 

@@ -1,7 +1,7 @@
 // import React from 'react'
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faBars } from "@fortawesome/free-solid-svg-icons";
-import logo from '../assets/logo.svg'
+import logo from '../assets/logo2.svg'
 
 import { useState } from "react";
 
@@ -21,13 +21,13 @@ const toggleSidebar = () => {
   };
 
   return (
-    <div className="flex">
+    <div className="">
         
         <button className="text-blact focus:outline-none md:hidden m-5 " onClick={toggleSidebar}>
         <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
-              fill="none"
+              fill="#fff"
               stroke="currentColor"
               strokeWidth={2}
             >
@@ -42,11 +42,11 @@ const toggleSidebar = () => {
             <div className={`h-screen w-64 fixed top-0  ${!isOpen ? "translate-x-0" : "translate-x-full"} transition-transform  text-black bg-sidebar`}>
                 <div className="space-y-3 ">
                     <div className="flex items-center justify-between mt-5 p-2">
-                        <a href="/home"><img src={logo} className='w-20' /></a>
+                        <a href="/home"><img src={logo} className=' w-32' /></a>
                     <button className=" focus:outline-none md:hidden" onClick={toggleSidebar}>
                     <svg
               xmlns="http://www.w3.org/2000/svg"
-              fill="none"
+              fill="#fff"
               className="h-6 w-6"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -65,14 +65,14 @@ const toggleSidebar = () => {
                     {/* {!isOpen && ( */}
                     <div className={`flex-1 ${!isOpen ?  "":"" }  `}>
                         
-                        <ul className="pt-2 pb-4 space-y-1 flex flex-col  text-lg gap-3">
-                            <li className=" border-b-neutral-400 border-b ">
+                        <ul className="pt-2 pb-4 space-y-1 flex flex-col  text-lg gap-5 mt-10">
+                            <li className=" border-b-white border-b">
                                 <a
                                     href="/Home"
-                                    className=" flex gap-2 p-2 space-x-3 rounded-md text-black"
+                                    className=" flex gap-2 p-2 space-x-3 rounded-md text-white"
                                 >
                                     
-                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 32 32">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" x="0px" y="0px" width="25" height="25"  viewBox="0 0 32 32">
 <path d="M 16 2.59375 L 15.28125 3.28125 L 2.28125 16.28125 L 3.71875 17.71875 L 5 16.4375 L 5 28 L 14 28 L 14 18 L 18 18 L 18 28 L 27 28 L 27 16.4375 L 28.28125 17.71875 L 29.71875 16.28125 L 16.71875 3.28125 Z M 16 5.4375 L 25 14.4375 L 25 26 L 20 26 L 20 16 L 12 16 L 12 26 L 7 26 L 7 14.4375 Z"></path>
 </svg>
                                     <span>الرئيسية</span>
@@ -85,7 +85,7 @@ const toggleSidebar = () => {
                                 </a>
                                
                             </li>
-                            {/* <li className="border-b-neutral-400 border-b " >
+                            {/* <li className="border-b-white border-b " >
                                 <a
                                     href="#"
                                     className="flex items-center p-2 space-x-3 rounded-md gap-3"
@@ -104,12 +104,12 @@ const toggleSidebar = () => {
                                 </a>
                                 
                             </li> */}
-                            <li className="border-b-neutral-400 border-b  ">
+                            <li className="border-b-white border-b ">
                                 <a
                                     href="#"
-                                    className="flex items-center p-2 space-x-3 rounded-md gap-3"
+                                    className="flex items-center p-2 space-x-3 rounded-md gap-3 text-white"
                                 >
-                                    <svg id='Purchase_Order_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
+                                    <svg id='Purchase_Order_24' width='24' fill="#fff" height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
                                             <g transform="matrix(0.43 0 0 0.43 12 12)" >
                                             <path  transform=" translate(-25, -25)" d="M 6 2 L 6 48 L 7 48 L 44 48 L 44 2 L 6 2 z M 8 4 L 42 4 L 42 46 L 8 46 L 8 4 z M 13 11 L 13 13 L 37 13 L 37 11 L 13 11 z M 13 25 L 13 27 L 17 27 L 17 25 L 13 25 z M 20 25 L 20 27 L 37 27 L 37 25 L 20 25 z M 13 31 L 13 33 L 17 33 L 17 31 L 13 31 z M 20 31 L 20 33 L 37 33 L 37 31 L 20 31 z M 13 37 L 13 39 L 17 39 L 17 37 L 13 37 z M 20 37 L 20 39 L 37 39 L 37 37 L 20 37 z" stroke-linecap="round" />
                                             </g>
@@ -119,13 +119,13 @@ const toggleSidebar = () => {
                                 </a>
                              
                             </li>
-                            <li className="border-b-neutral-400 border-b">
+                            <li className="border-b-white border-b">
                                 <a
                                     href="#"
-                                    className="flex items-center p-2 space-x-3 rounded-md gap-3"
+                                    className="flex items-center p-2 space-x-3 rounded-md gap-3 text-white"
                                 >
                                     
-                                    <svg id='Receipt_Terminal_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' ><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
+                                    <svg id='Receipt_Terminal_24' width='24' fill="#fff" height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' ><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
 
 
                                         <g transform="matrix(0.45 0 0 0.45 12 12)" >
@@ -138,13 +138,13 @@ const toggleSidebar = () => {
                                 </a>
                                 
                             </li>
-                            <li className="border-b-neutral-400 border-b  ">
+                            <li className="border-b-white border-b">
                                 <a
                                     href="/UserProfile"
-                                    className="flex items-center p-2 space-x-3 rounded-md gap-3"
+                                    className="flex items-center p-2 space-x-3 rounded-md gap-3 text-white"
                                 >
                                     
-                                    <svg id='Male_User_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
+                                    <svg id='Male_User_24' width='24' height='24' fill="#fff" viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
 
 
                                             <g transform="matrix(0.77 0 0 0.77 12 12)" >
@@ -155,12 +155,12 @@ const toggleSidebar = () => {
                                 </a>
                               
                             </li>
-                            <li className="border-b-neutral-400 border-b  ">
+                            <li className="border-b-white border-b  ">
                                 <a
                                     href="#"
-                                    onClick={logout} className="flex items-center p-2 space-x-3 rounded-md"
+                                    onClick={logout} className="flex items-center p-2 space-x-3 rounded-md text-white"
                                 >
-                                    <svg id='Logout_Circle_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' ><rect width='24' height='24' fill='#000000' opacity='0'/>
+                                    <svg id='Logout_Circle_24' width='24' height='24' fill="#fff"  viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' ><rect width='24' height='24' fill='#000000' opacity='0'/>
 
 
 <g transform="matrix(0.42 0 0 0.42 12 12)" >
