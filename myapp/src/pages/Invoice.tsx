@@ -31,7 +31,14 @@ export default function Invoice() {
   })}
   return (
     <>
-   {borrowData.name}
+   <div className='flex flex-col gap-3'>
+    <p> الاسم:{borrowData.name}</p>
+    <p> المبلغ:{borrowData.amount}</p>
+    <p> الدفعات:{borrowData.package}</p>
+    <p> اسم المسلف:{borrowData.nameOfBorrower}</p>
+   
+  
+   </div>
        
            
    
