@@ -27,6 +27,7 @@ function SendBorrow() {
             }).catch(err => {
                 console.log(err);
             })
+            localStorage.setItem("isOrder", id)
 
     }, [id])
     return (

@@ -7,6 +7,8 @@ type Iborrow = {
     name : string;
     amount: number;
     package: string;
+    nameOfBorrower:string;
+    orderStatus:string;
   
   }
   
@@ -21,45 +23,19 @@ export default function AdminBorrowR() {
   const getBorrow =()=>{
     axios.get("https://64fc93ca605a026163aea289.mockapi.io/SendBorrow")
     .then((res)=>{
-        console.log(res);
+          console.log(res.data);
+          
+          setBorrowData(res.data);
+        
     
-    setBorrowData(res.data);
 })}
+const filteredData = borrowData.filter(user => user.orderStatus == "تم التسليف");
 
   return (
-//     <>
-//     <div className="flex gap-20">
-//     <div className="lg:w-64">
-//     <AdminSidebar/>
-//       </div> 
 
-// <div className=" w-full mt-20">
-// {/* <Breadcrumbs>
-//       <a href="/Home">الرئيسية</a>
-//     </Breadcrumbs> */}
-    
-//   <div className="flex flex-wrap gap-5 mt-10">
-//     {borrowData.map((item)=>{
-
-// return(
-//   <div className="flex w-72 h-52 bg-card shadow rounded  text-lg ">
-//     <div className="flex flex-col p-4 gap-4 w-full justify-center">
-//       <div className=" flex"> <h3>الاسم :</h3> <p>{item.name}</p></div>
-//       <div className="flex"> <h3>المبلغ :</h3><p>{item.amount}</p></div>
-//       <div className="flex"> <h3>الدفعات :</h3> <p>{item.package} دفعات</p></div>
-      
-     
-       
-//   </div>
-//   </div>
-// )
-//     })}
-//     </div>
-//     </div>
-//     </div>
-//     </>
 <>
-<div className="lg:flex lg:gap-20">
+{filteredData.length > 0 ? (
+  <div className="lg:flex lg:gap-20">
     <div className="lg:w-64 shadow-md">
     <AdminSidebar/>
       </div> 
@@ -70,14 +46,16 @@ export default function AdminBorrowR() {
     </Breadcrumbs>
     
   <div className="flex flex-wrap  justify-center items-center gap-5 mt-10">
-    {borrowData.map((item)=>{
+    {filteredData.map((item)=>{
 
 return(
   <div className="flex w-72 h-52 bg-card shadow rounded  text-lg ">
     <div className="flex flex-col p-4 gap-4 w-full justify-center">
       <div className=" flex"> <h3>الاسم :</h3> <p>{item.name}</p></div>
+      <div className=" flex"> <h3>اسم المسلف :</h3> <p>{item.nameOfBorrower}</p></div>
       <div className="flex"> <h3>المبلغ :</h3><p>{item.amount}</p></div>
       <div className="flex"> <h3>الدفعات :</h3> <p>{item.package} دفعات</p></div>
+      <div className="flex"> <h3>حالة الطلب :</h3> <p>{item.orderStatus} </p></div>
       
    
        
@@ -88,6 +66,9 @@ return(
     </div>
     </div>
     </div>
+     ) : (
+      <p></p>
+    )}
 
 </>
   )

@@ -18,11 +18,11 @@ export default function Payment() {
         borrowDetails:""
     })
 
-
+    const id=localStorage.getItem("isOrder")
     const postOrder = ()=>{
-        axios.post("https://64fc93ca605a026163aea289.mockapi.io/borrowOrder",{
-            name:dataBorrow.name,
-            borrowDetails:dataBorrow.borrowDetails,
+        axios.put(`https://64fc93ca605a026163aea289.mockapi.io/SendBorrow/${id}`,{
+            nameOfBorrower:dataBorrow.name,
+            orderStatus:"تم التسليف"
 
      } )
         .then(res =>{

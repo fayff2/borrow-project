@@ -6,7 +6,7 @@ import {
   Button,
   IconButton,
 } from "@material-tailwind/react";
-// import Logo from '../assets/logo2.svg'
+import Logo from '../assets/logo2.svg'
  
 export function NavbarSide() {
   const [openNav, setOpenNav] = React.useState(false);

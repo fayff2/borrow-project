@@ -9,6 +9,7 @@ type Iborrow = {
     amount: number;
     package: string;
     total: number;
+    orderStatus:string
 
 
 
@@ -22,6 +23,9 @@ export default function BorrowRequest() {
         amount: 0,
         package:"",
         total: 0,
+        orderStatus:"",
+        
+
        
     })
     const [total , setTotal ] = React.useState("")
@@ -32,6 +36,8 @@ export default function BorrowRequest() {
             amount:dataBorrow.amount,
             package:dataBorrow.package,
             total: total,
+            nameOfBorrower: "",
+            orderStatus: "تم الطلب",
 
      } )
         .then(res =>{
@@ -43,6 +49,7 @@ export default function BorrowRequest() {
      
 
     }
+    
     const test = (e) =>{
 
         if(e.target.value === "4"){
@@ -97,7 +104,7 @@ export default function BorrowRequest() {
 
     <div className="">
      <label>المبلغ</label><br></br>
-     <input type="number"  placeholder="ادخل المبلغ " className=" w-60 border border-black" value={dataBorrow.amount} onChange={e=>setDataBorrow({...dataBorrow, amount:Number(e.target.value)})}/>
+     <input type="text"  placeholder="ادخل المبلغ " className=" w-60 border border-black" value={dataBorrow.amount} onChange={e=>setDataBorrow({...dataBorrow, amount:Number(e.target.value)})}/>
     </div>
  
 
