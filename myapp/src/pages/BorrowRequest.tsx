@@ -29,19 +29,24 @@ export default function BorrowRequest() {
        
     })
     const [total , setTotal ] = React.useState("")
-
     const postBorrow = ()=>{
         axios.post("https://64fc93ca605a026163aea289.mockapi.io/SendBorrow",{
             name:dataBorrow.name,
             amount:dataBorrow.amount,
             package:dataBorrow.package,
             total: total,
-            nameOfBorrower: "",
-            orderStatus: "تم الطلب",
+            
+            Borrower:{
+                nameOfBorrower:"",
+                
+                orderStatus:"تم الطلب",
+            }
+
 
      } )
         .then(res =>{
             console.log(res);
+            const {id} = localStorage.getItem("borrowwerId")
 
             
         })

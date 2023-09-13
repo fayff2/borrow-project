@@ -17,12 +17,18 @@ export default function Payment() {
         name:"",
         borrowDetails:""
     })
-
-    const id=localStorage.getItem("isOrder")
+    const userReqId =localStorage.getItem("userRequestId")
+    const userProvId=localStorage.getItem("isLogin")
     const postOrder = ()=>{
-        axios.put(`https://64fc93ca605a026163aea289.mockapi.io/SendBorrow/${id}`,{
+        axios.put(`https://64fc93ca605a026163aea289.mockapi.io/SendBorrow/${userProvId}`,{
+           Borrower:{
             nameOfBorrower:dataBorrow.name,
-            orderStatus:"تم التسليف"
+            orderStatus:"تم التسليف",
+            userReqId:userReqId,
+            userProvId:userProvId,
+            
+
+            }
 
      } )
         .then(res =>{
