@@ -2,8 +2,7 @@ import React from 'react'
 import axios from 'axios';
 import AdminSidebar from "../component/AdminSidebar";
 import { Breadcrumbs } from "@material-tailwind/react"
-import userimg from '../assets/user.svg'
-
+import userimg from "../assets/user.svg"
 type Iborrow = {
     name : string;
     amount: number;

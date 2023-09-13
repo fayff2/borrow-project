@@ -13,6 +13,7 @@ type Iborrow = {
 
 
 
+
 }
 
 
@@ -33,6 +34,7 @@ export default function BorrowRequest() {
             amount:dataBorrow.amount,
             package:dataBorrow.package,
             total: total,
+           
 
      } )
         .then(res =>{
@@ -45,7 +47,7 @@ export default function BorrowRequest() {
 
     }
     const cal = (e) =>{
-      e.preventDefault
+
 
         if(e.target.value === "4"){
             const vat2 = 0.1;
