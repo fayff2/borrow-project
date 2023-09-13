@@ -8,7 +8,7 @@ type Iborrow = {
     amount: number;
     package: string;
     nameOfBorrower:string;
-    orderStatus:string;
+    orderStatus:string; 
   
   }
   
