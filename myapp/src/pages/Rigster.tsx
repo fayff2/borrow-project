@@ -23,8 +23,8 @@ export default function Rigster() {
 
     const submitData =()=>{
   
-    axios.post("https://64f753f19d775408495375aa.mockapi.io/useraccount" ,inputValue).then(res =>{
-        console.log(res.data)
+    axios.post("https://64f753f19d775408495375aa.mockapi.io/useraccount" ,inputValue).then(()=>{
+        // console.log(res.data)
 
         const {name , email,password ,iBan ,NId ,phone }= inputValue;
         if (name === ""){

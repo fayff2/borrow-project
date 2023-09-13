@@ -4,9 +4,10 @@ import { useParams } from 'react-router-dom'
 import UserSidebar from '../component/UserSidebar';
 import { Breadcrumbs } from "@material-tailwind/react"
 import { Link } from 'react-router-dom';
+import Footer from "../component/Footer"
 
 type Iborrow={
-    
+
         name : string;
         amount: number;
         package: string;
@@ -24,9 +25,9 @@ function SendBorrow() {
 
             .then((res) => {
                 setstate([res.data]);
-            }).catch(err => {
-                console.log(err);
+                
             })
+            localStorage.setItem("isOrder",String(id))
 
     }, [id])
     return (
@@ -126,6 +127,9 @@ function SendBorrow() {
           </div>
           </div>
           </div>
+          <div className="bg-dark-blue w-full h-10 flex justify-center items-center text-center">
+      <Footer/>
+    </div>
         </>
     )
 }

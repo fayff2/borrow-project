@@ -17,7 +17,7 @@ export default function Login() {
 
     const submitLogin =()=>{
         axios.get("https://64f753f19d775408495375aa.mockapi.io/useraccount").then(res =>{
-            console.log(res.data)
+            // console.log(res.data)
 
             const role ="admin"
             const pass = "5566"
@@ -44,7 +44,7 @@ export default function Login() {
                   localStorage.setItem("name", isLogin.name);
                   if (isLogin) {
                     nav("/home");
-                  } else {
+                  } else  {
                     Swal.fire("الايميل او كلمة المرور غير صحيحه ");
                   }
               }

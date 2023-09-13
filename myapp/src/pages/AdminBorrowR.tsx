@@ -2,7 +2,8 @@ import React from 'react'
 import axios from 'axios';
 import AdminSidebar from "../component/AdminSidebar";
 import { Breadcrumbs } from "@material-tailwind/react"
-import userimg from "../assets/user.svg"
+import userimg from "../assets/149071.png"
+import Footer from '../component/Footer';
 type Iborrow = {
     name : string;
     amount: number;
@@ -21,7 +22,6 @@ export default function AdminBorrowR() {
   const getBorrow =()=>{
     axios.get("https://64fc93ca605a026163aea289.mockapi.io/SendBorrow")
     .then((res)=>{
-        console.log(res);
     
     setBorrowData(res.data);
 })}
@@ -29,7 +29,7 @@ export default function AdminBorrowR() {
   return (
 
 <>
-<div className="lg:flex lg:gap-20 bg-img-header  h-screen">
+<div className="lg:flex lg:gap-20 bg-img-header h-screen overflow-scroll">
     <div className="lg:w-64 shadow-md">
     <AdminSidebar/>
       </div> 
@@ -65,9 +65,16 @@ export default function AdminBorrowR() {
 </div>
 
 </div>
+<div className="mt-5">
 <Breadcrumbs>
-      <a href="/Admin" className=" mt-10 mr-28 text-lg">الرئيسية</a>
+
+<a href="/Admin" className=" text-lg">الرئيسية</a>
+      <a href="/Admin" className="  text-lg">طلبات السلف</a>
+
+     
     </Breadcrumbs>
+</div>
+
     
   <div className="flex flex-wrap justify-center items-center gap-5 mt-10 w-full p-4">
 
@@ -89,6 +96,9 @@ return(
     })}
     </div>
     </div>
+    </div>
+    <div className="bg-dark-blue w-full h-10 flex justify-center items-center text-center">
+      <Footer/>
     </div>
 
 </>

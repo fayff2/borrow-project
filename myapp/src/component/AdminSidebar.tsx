@@ -65,8 +65,8 @@ const toggleSidebar = () => {
                     {/* {!isOpen && ( */}
                     <div className={`flex-1 ${!isOpen ?  "":"" }  `}>
                         
-                        <ul className="pt-2 pb-4 space-y-1 flex flex-col  text-lg gap-5">
-                            <li className=" border-b-white border-b ">
+                        <ul className="pt-2 pb-4 space-y-1 flex flex-col  text-lg mt-10">
+                            <li className="border-t-white border-t py-2 light-blue-hover hover:opacity-90 text-white group-active:scale-95 transition-all duration-200 rounded">
                                 <a
                                     href="/Admin"
                                     className=" flex gap-2 p-2 space-x-3 rounded-md text-white"
@@ -85,7 +85,7 @@ const toggleSidebar = () => {
                                 </a>
                                
                             </li>
-                            <li className="border-b-white border-b " >
+                            <li className= "border-t-white border-t py-2 light-blue-hover hover:opacity-90 text-white group-active:scale-95 transition-all duration-200 rounded" >
                                 <a
                                     href="/adminborrowreq"
                                     className="flex items-center p-2 space-x-3 rounded-md gap-3"
@@ -104,9 +104,9 @@ const toggleSidebar = () => {
                                 </a>
                                 
                             </li>
-                            <li className="border-b-white border-b">
+                            <li className="border-t-white border-t py-2 light-blue-hover hover:opacity-90 text-white group-active:scale-95 transition-all duration-200 rounded">
                                 <a
-                                    href="#"
+                                    href="/Invoice"
                                     className="flex items-center p-2 space-x-3 rounded-md gap-3"
                                 >
                                     <svg id='Purchase_Order_24' width='24'  fill="#fff" height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
@@ -139,7 +139,7 @@ const toggleSidebar = () => {
                                 
                             </li> */}
                             
-                            <li className="border-b-neutral-400 border-b  ">
+                            <li className="border-t-white border-t py-2 light-blue-hover hover:opacity-90 text-white group-active:scale-95 transition-all duration-200 rounded">
                                 <a
                                     href="#"
                                     onClick={logout} className="flex items-center p-2 space-x-3 rounded-md"

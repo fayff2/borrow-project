@@ -6,13 +6,12 @@ import { Link } from "react-router-dom"
 import Footer from "../component/Footer"
 
 type Iborrow = {
+
     name : string;
     amount: number;
     package: string;
     total: number;
-
-
-
+    orderStatus:string;
 
 }
 
@@ -24,6 +23,9 @@ export default function BorrowRequest() {
         amount: 0,
         package:"",
         total: 0,
+        orderStatus:"",
+       
+        
        
     })
     const [total , setTotal ] = React.useState("")
@@ -35,21 +37,28 @@ export default function BorrowRequest() {
             package:dataBorrow.package,
             total: total,
            
+            
+            Borrower:{
+              nameOfBorrower:"",
+              
+              orderStatus:"تم الطلب",
+          }
 
      } )
-        .then(res =>{
-            console.log(res);
+        // .then(res =>{
+       
+           
 
             
-        })
+        // })
 
      
 
     }
-    const cal = (e) =>{
+    const cal = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) =>{
 
 
-        if(e.target.value === "4"){
+        if((e.target as HTMLInputElement).value === "4"){
             const vat2 = 0.1;
             const amount2 = dataBorrow.amount * vat2 ;
             const total1 = amount2 + dataBorrow.amount
@@ -59,7 +68,7 @@ export default function BorrowRequest() {
 
             setTotal(total2.toString())
             
-        }else if(e.target.value  === "2"){
+        }else if((e.target as HTMLInputElement).value  === "2"){
             const vat2 = 0.05;
             const amount2 = dataBorrow.amount * vat2 ;
             const total1 = amount2 + dataBorrow.amount

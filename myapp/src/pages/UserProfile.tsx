@@ -24,7 +24,7 @@ export default function UserProfile() {
 
   React.useEffect(()=>{
     axios.get(`https://64f753f19d775408495375aa.mockapi.io/useraccount/${id}`).then((res)=>{
-      console.log(res.data)
+      // console.log(res.data)
       setShowUser([res.data])
     })
   },[id])

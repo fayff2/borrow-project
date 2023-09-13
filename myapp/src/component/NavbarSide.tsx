@@ -19,7 +19,7 @@ export function NavbarSide() {
   }, []);
  
   const navList = (
-    <ul className="text-center  flex flex-col items-start lg:mb-0 lg:mt-0 lg:mr-10 lg:flex-row lg:items-center lg:gap-6 ">
+    <ul className="text-center flex flex-col items-start lg:mb-0 lg:mt-0 lg:mr-10 lg:flex-row lg:items-center lg:gap-6 ">
       <Typography
         as="li"
        
@@ -54,8 +54,8 @@ export function NavbarSide() {
   );
  
   return (
-    <Navbar className="px-4 lg:px-8 w-screen border-0 bg-transparent text-black ">
-      <div className="container flex justify-between items-center ">
+    <Navbar className="px-4 lg:px-8 w-full border-0 bg-transparent text-black  ">
+      <div className="flex justify-between items-center w-full  ">
         <Typography
           as="a"
           href="/"

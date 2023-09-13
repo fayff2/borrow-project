@@ -45,7 +45,7 @@ const name = localStorage.getItem("name");
   const getBorrow =()=>{
     axios.get("https://64fc93ca605a026163aea289.mockapi.io/SendBorrow")
     .then((res)=>{
-        console.log(res);
+        // console.log(res);
     
     setBorrowData(res.data);
 })
@@ -53,7 +53,7 @@ const name = localStorage.getItem("name");
 
 const checkState =()=>{
   axios.get(`https://64f753f19d775408495375aa.mockapi.io/useraccount/${id}`).then((res)=>{
-      console.log(res.data)
+      // console.log(res.data)
       if(res.data.status == true){
        navigate("/borrowrequest")
 

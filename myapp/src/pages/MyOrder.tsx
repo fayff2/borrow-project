@@ -15,15 +15,14 @@ type Iborrow = {
 export default function MyOrder() {
 
     const [borrowData , setBorrowData] = React.useState <Iborrow[]>([])
-
-    const id = localStorage.getItem("isLogin")
+    const id=localStorage.getItem("isOrder")
  
 
 
 
 React.useEffect(()=>{
         axios.get(`https://64fc93ca605a026163aea289.mockapi.io/SendBorrow/${id}`).then((res)=>{
-            console.log(res.data)
+            // console.log(res.data)
             
             setBorrowData([res.data]);
            
