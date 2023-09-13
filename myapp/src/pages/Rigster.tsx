@@ -65,7 +65,7 @@ export default function Rigster() {
 
 <h1 className='text-center text-2xl my-4 font-bold'>التسجيل</h1>
     <div className="mb-4">
-      <label className="block text-gray-700 text-sm font-bold mb-2">
+      <label className="block text-gray-700 text-lg font-bold mb-2">
           الاسم 
   
         </label>
@@ -75,27 +75,27 @@ export default function Rigster() {
 
 
     <div className="mb-4">
-      <label className="block text-gray-700 text-sm font-bold mb-2"
+      <label className="block text-gray-700 text-lg font-bold mb-2"
       >الهويه الوطنية  </label>
       <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="text" placeholder="ادخل الهوية الوطنية"  onChange={e => setInputValue({...inputValue,NId:e.target.value})}/>
     </div>
 
     <div className="mb-4">
-      <label className="block text-gray-700 text-sm font-bold mb-2"
+      <label className="block text-gray-700 text-lg font-bold mb-2"
       > الايبان  </label>
       <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="text" placeholder="ادخل الايبان "  onChange={e => setInputValue({...inputValue,iBan:e.target.value})}/>
     </div>
 
 
     <div className="mb-4">
-      <label className="block text-gray-700 text-sm font-bold mb-2"
+      <label className="block text-gray-700 text-lg font-bold mb-2"
       > البريد الالكتروني </label>
       <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="text" placeholder="ادخل البريد الالكتروني "  onChange={e => setInputValue({...inputValue,email:e.target.value})}/>
     </div>
 
 
     <div className="mb-4">
-      <label className="block text-gray-700 text-sm font-bold mb-2"
+      <label className="block text-gray-700 text-lg font-bold mb-2"
       > رقم الجوال</label>
       <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="text" placeholder="ادخل رقم الجوال  "   onChange={e => setInputValue({...inputValue,phone:e.target.value})}/>
     </div>
@@ -103,7 +103,7 @@ export default function Rigster() {
 
 
     <div className="mb-6">
-      <label className="block text-gray-700 text-sm font-bold mb-2">
+      <label className="block text-gray-700 text-lg font-bold mb-2">
      كلمة المرور
       </label>
       <input className="shadow appearance-none border rounded w-full py-2 px-3 mb-3 leading-tight focus:outline-none focus:shadow-outline "   type="password" placeholder="********" onChange={e => setInputValue({...inputValue,password:e.target.value})}/>

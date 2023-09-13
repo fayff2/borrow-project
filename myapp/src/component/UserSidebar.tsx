@@ -106,7 +106,7 @@ const toggleSidebar = () => {
                             </li> */}
                             <li className="border-b-white border-b ">
                                 <a
-                                    href="#"
+                                    href="/MyOrder"
                                     className="flex items-center p-2 space-x-3 rounded-md gap-3 text-white"
                                 >
                                     <svg id='Purchase_Order_24' width='24' fill="#fff" height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>

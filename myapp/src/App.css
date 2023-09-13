@@ -25,17 +25,17 @@
 
 .button-color{
 background-color:  #8794BA !important;
-width: 100px;
+width: 140px;
 border-radius: 5px;
-padding: 5px;
+padding: 10px;
 color:white !important;
 
 }
 
 .button-border{
     border: 2px solid  #8794BA!important;
-    width: 100px;
-    padding: 5px;
+    width: 140px;
+    padding: 10px;
     border-radius: 5px;
     color:white !important;
 
@@ -59,7 +59,24 @@ color:white !important;
         background-color: #172755;
         
     }
+    .bg-dark-blue{
+        background-color: #172755;
+        color:white; 
+    }
+    .button-dark-blue{
+        background-color: #172755;
+        color:white;
+
+    }
     .bg-card{
         background-color: white;
+    }
+
+    .bg-img-header{
+        background-image: url("./assets/المستخدم.png");
+        background-position: center top;
+        background-repeat: no-repeat;
+       background-size: cover;
+
     }
     

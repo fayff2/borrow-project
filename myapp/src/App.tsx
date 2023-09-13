@@ -11,6 +11,7 @@ import BorrowRequest from './pages/BorrowRequest'
 import AdminBorrowR from './pages/AdminBorrowR' 
 import SendBorrow from './pages/SendBorrow'
 import Payment from './pages/Payment'
+import MyOrder from './pages/MyOrder'
 // import Invoice from './pages/Invoice'
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
       <Route path='/SendBorrow/:id' element={<SendBorrow/>}></Route>
       <Route path='/payment' element={<Payment/>}></Route>
       {/* <Route path='/invoice/:id' element={<Invoice/>}></Route> */}
+      <Route path='/myorder' element={<MyOrder/>}></Route>
 
     </Routes>
    </>

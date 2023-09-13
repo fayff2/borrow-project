@@ -119,7 +119,7 @@ export function NavbarSide() {
           <Button className="button-color">
           <a href="/Rigster">التسجيل</a>
         </Button>
-        <Button  className="button-border">
+        <Button  className="button-border ">
           <a href="/Login"> تسجيل الدخول</a>
         </Button>
           </div>

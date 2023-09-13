@@ -3,6 +3,7 @@ import axios from "axios"
 import UserSidebar from "../component/UserSidebar"
 import { Breadcrumbs } from "@material-tailwind/react"
 import { Link } from "react-router-dom"
+import Footer from "../component/Footer"
 
 type Iborrow = {
     name : string;
@@ -43,7 +44,8 @@ export default function BorrowRequest() {
      
 
     }
-    const test = (e) =>{
+    const cal = (e) =>{
+      e.preventDefault
 
         if(e.target.value === "4"){
             const vat2 = 0.1;
@@ -70,34 +72,41 @@ export default function BorrowRequest() {
 
     }
   return (
-    <div className="lg:flex lg:gap-20">
+    <>
+    <div className="lg:flex lg:gap-20 bg-img-header h-screen">
     <div className="lg:w-64 shadow-md">
     <UserSidebar/>
       </div>
 
-      <div className=" w-full mt-20">
+      <div className=" w-full mt-10 ml-5">
+
+      <div className="mt-20 mr-28 mb-5 ">
+
 <Breadcrumbs>
-      <a href="/Home" className="opacity-60">الرئيسية</a>
-     
-      <a href="/BorrowRequest" >
-       طلب سلف
-      </a>
-    </Breadcrumbs>
+  <a href="/Home" className="opacity-60 text-lg">الرئيسية</a>
+ 
+  <a href="/BorrowRequest" className=' text-lg' >
+طلب سلف
+  </a>
+</Breadcrumbs>
+</div>
+
+
     
-    <div className="flex  items-center justify-center lg:mt-32 mt-24">
-        <div className="border border-black  flex flex-col gap-10 p-5 h-72 text-lg">
+    <div className="flex justify-center items-center text-xl">
+        <div className="w-9/12 p-4 text-lg  bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700 flex flex-col gap-10">
 
 <div className="flex  flex-col gap-5 justify-center items-center lg:flex-row">
 
-<div className="">
-<label>الاسم</label><br></br>
-<input type="text" placeholder="ادخل الاسم الثلاثي" className=" w-60 border border-black"  onChange={e=>setDataBorrow({...dataBorrow, name:e.target.value})}/>
+<div className="text-xl w-6/12">
+<label>الاسم</label>
+<input type="text" placeholder="ادخل الاسم الثلاثي" className= " text-xl  mt-3 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  onChange={e=>setDataBorrow({...dataBorrow, name:e.target.value})}/>
       
 </div>
 
-    <div className="">
-     <label>المبلغ</label><br></br>
-     <input type="number"  placeholder="ادخل المبلغ " className=" w-60 border border-black" value={dataBorrow.amount} onChange={e=>setDataBorrow({...dataBorrow, amount:Number(e.target.value)})}/>
+    <div className="text-xl w-6/12">
+     <label>المبلغ</label>
+     <input type="number"  placeholder="ادخل المبلغ " className="text-xl mt-3 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value={dataBorrow.amount} onChange={e=>setDataBorrow({...dataBorrow, amount:Number(e.target.value)})}/>
     </div>
  
 
@@ -105,18 +114,27 @@ export default function BorrowRequest() {
 
 </div>
     
+<h1 className="text-right text-xl">اختر الدفعات :</h1>
 <div className="flex  flex-col gap-5 justify-center items-center lg:flex-row">
-<button value={"4"} onClick={(e)=>{test(e)
-        setDataBorrow({...dataBorrow , package:"4"})}} className="bg-light-blue w-60  h-14" >4 شهور هامش الربح  10%</button>
+   
+<button value={"4"} onClick={(e)=>{cal(e)
+setDataBorrow({...dataBorrow , package:"4"})}} className="bg-light-blue w-6/12 h-14 rounded-md" >4 شهور هامش الربح  10%</button>
 
-      <button value={"2"}  onClick={(e)=>{test(e) 
-      setDataBorrow({...dataBorrow , package:"2"})}} className="bg-light-blue w-60 h-14" > شهرين هامش الربح  5%</button>
+      <button value={"2"}  onClick={(e)=>{cal(e) 
+      setDataBorrow({...dataBorrow , package:"2"})}} className="bg-light-blue w-6/12 h-14 rounded-md" > شهرين هامش الربح  5%</button>
 </div>
        
         <div className="">
             <h1>المجموع :</h1>
         <h1>{total}</h1>
         </div>
+
+
+
+        <div className="flex justify-center">
+    <Link to="/home">
+    <button  onClick={postBorrow} className="button-dark-blue w-36 h-10 rounded-md mt-5">اضافه</button></Link>
+    </div>
      
        
     </div>
@@ -126,14 +144,17 @@ export default function BorrowRequest() {
        
 
 
-        </div>
-        <div className="flex justify-center">
-    <Link to="/home">
-    <button  onClick={postBorrow} className="button-color mt-5">اضافه</button></Link>
+        
     </div>
+
+
     </div>
         
     </div>
+    <div className="bg-dark-blue w-full h-10 flex justify-center items-center text-center ">
+      <Footer/>
+    </div>
+    </>
    
   )
 }
