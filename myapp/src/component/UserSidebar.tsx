@@ -17,6 +17,7 @@ const toggleSidebar = () => {
 
   const logout = () => {
     localStorage.removeItem("isLogin");
+    localStorage.removeItem("isOrder");
     window.location.href = "/login";
   };
 

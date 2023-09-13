@@ -2,7 +2,7 @@ import React from "react"
 import axios from "axios"
 import UserSidebar from "../component/UserSidebar"
 import { Breadcrumbs } from "@material-tailwind/react"
-import { Link } from "react-router-dom"
+
 
 type Iborrow = {
     name : string;
@@ -29,7 +29,6 @@ export default function BorrowRequest() {
        
     })
     const [total , setTotal ] = React.useState("")
-    
     const postBorrow = ()=>{
         axios.post("https://64fc93ca605a026163aea289.mockapi.io/SendBorrow",{
             name:dataBorrow.name,
