@@ -8,7 +8,7 @@ type Iborrow = {
     amount: number;
     package: string;
     nameOfBorrower:string;
-    orderStatus:string; 
+    orderStatus:string;
   
   }
   
@@ -34,11 +34,11 @@ const filteredData = borrowData.filter(user => user.orderStatus == "تم الت�
   return (
 
 <>
-{filteredData.length > 0 ? (
-  <div className="lg:flex lg:gap-20">
     <div className="lg:w-64 shadow-md">
     <AdminSidebar/>
-      </div> 
+      </div>
+{filteredData.length > 0 ? (
+  <div className="lg:flex lg:gap-20">
 
 <div className=" w-full mt-20">
 <Breadcrumbs>

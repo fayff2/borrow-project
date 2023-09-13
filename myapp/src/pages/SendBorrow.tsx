@@ -18,7 +18,6 @@ function SendBorrow() {
 
     const [state, setstate] = useState <Iborrow[]>([])
   const { id } = useParams();
-  // localStorage.setItem("borrowwerId" , String(id) )
 
     useEffect(() => {
         axios.get(`https://64fc93ca605a026163aea289.mockapi.io/SendBorrow/${id}`)
@@ -28,9 +27,7 @@ function SendBorrow() {
             }).catch(err => {
                 console.log(err);
             })
-            localStorage.setItem("userRequestId", id)
-
-            
+            localStorage.setItem("isOrder", id)
 
     }, [id])
     return (
