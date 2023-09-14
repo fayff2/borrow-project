@@ -47,8 +47,8 @@ const filteredData = borrowData.filter(user => user.orderStatus == "تم الت�
 <Breadcrumbs>
   <a href="/Home" className="opacity-60 text-lg">الرئيسية</a>
  
-  <a href="/BorrowRequest" className=' text-lg' >
-طلب سلف
+  <a href="/BorrowRequest" className=' text-lg' > الفواتير
+
   </a>
 </Breadcrumbs>
 </div>
