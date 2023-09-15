@@ -16,4 +16,4 @@
   title="Optional title"
   style="display: inline-block; margin: 0 auto; max-width: 300px">
 
-<a href="https://startling-sprite-45f48c.netlify.app/"><a>
+[I'm an inline-style link](https://startling-sprite-45f48c.netlify.app/)
